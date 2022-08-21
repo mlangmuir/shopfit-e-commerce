@@ -7,7 +7,7 @@ const { getAllItems, getItems, getItemById, getItemByName, getItemByCategory, ge
 const { getCompanies, getCompanyById, getCompanyByName } = require('./Handlers/CompanyHandlers');
 const { addedNewOrder, deleteOrder, getOrders, getOrderById } = require('./Handlers/OrdersHandlers')
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 express()
   .use(function (req, res, next) {
