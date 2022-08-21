@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const path = require('path');
 const morgan = require('morgan');
 const { getAllItems, getItems, getItemById, getItemByName, getItemByCategory, getItemByBodyLocation } = require('./Handlers/ItemHandlers');
 const { getCompanies, getCompanyById, getCompanyByName } = require('./Handlers/CompanyHandlers');
@@ -25,6 +26,9 @@ express()
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use('/', express.static(__dirname + '/'))
+
+  // Have Node serve the files for our built React app
+  .use(express.static(path.resolve(__dirname, '../client/build')))
 
   // REST endpoints
 
@@ -80,6 +84,11 @@ express()
       status: 404,
       message: "This is obviously not what you are looking for.",
     });
+  })
+
+  // All other GET requests not handled before will return our React app
+  .get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
   })
 
   .listen(PORT, () => console.info(`Listening on port ${PORT}`));

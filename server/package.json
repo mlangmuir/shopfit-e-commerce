@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "build": "cd client && yarn install && yarn run build"
+  },
+  "engines": {
+    "node": "17.9.0",
+    "yarn": "1.22.18"
   },
   "keywords": [],
   "author": "",
