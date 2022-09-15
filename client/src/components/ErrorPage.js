@@ -56,7 +56,8 @@ const Img = styled.img`
     height: 150px;
 `;
 
-const H1 = styled.p` text-align: center;
+const H1 = styled.p`
+    text-align: center;
     padding: 40px;
     font-size: 25px;
 `;
