@@ -14,7 +14,7 @@ In the terminal, access client by running `cd client`. Then, run `yarn` and `yar
 ### Backend
 Access directory by running `cd server`. Install `express`, `mongodb`, `nodemon` and `morgan`. Once dependencies installed, run proxy by running `nodemon`.
 
-### batchImport to MongoDB
+### Batch import to MongoDB
 All products need to be imported to the database. In the server folder, run `node << drag batchImport.js file in here >>.
 
 ![Getting Started](./client//src//assets/readme-screenshot.png)
