@@ -4,7 +4,7 @@ This was a project that I did with a partner as part of the Diploma of Full-Stac
 
 Users are able to use a search bar to search products, as well as filter products based on price, category, body location and availability.
 
-A full demo of the website is featured at the following link: https://www.youtube.com/watch?v=8Nyvra5WJ44&ab_channel=MatthewLangmuir
+A full demo of the website is featured at the following link: https://www.youtube.com/watch?v=fYlcX2Ul3h0&ab_channel=MatthewLangmuir
 
 ## Development
 
